@@ -1,21 +1,30 @@
 <!-- trigger rebuild -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Subscribed Channels</title>
+  <meta charset="UTF-8">
+  <title>My Study Dashboard</title>
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
-  <h1>My Subscribed Channels</h1>
+  <header>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>My Subscribed Channels</h1>
+    <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
+  </header>
 
-  <input type="text" id="search" placeholder="Search videos...">
-  <button onclick="shuffleVideos()">Shuffle</button>
-  <button onclick="showWatchLater()">View Watch Later</button>
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search videos...">
+    <button onclick="shuffleVideos()">Shuffle</button>
+    <button onclick="showWatchLater()">View Watch Later</button>
+  </div>
 
-  <div id="reminder"></div>
   <div id="channels-container"></div>
+  <div id="reminder"></div>
 
   <script src="app.js"></script>
 </body>
