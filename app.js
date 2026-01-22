@@ -78,3 +78,19 @@ function startReminder() {
     document.getElementById("reminder").textContent = "⏰ You’ve been watching for 1 hour!";
   }, 3600000);
 }
+
+// Dark mode toggle
+document.getElementById("darkModeToggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
+
+// Keyboard shortcuts
+document.addEventListener("keydown", e => {
+  if (e.key === "/") {
+    e.preventDefault();
+    document.getElementById("search").focus();
+  }
+  if (e.key.toLowerCase() === "w") {
+    showWatchLater();
+  }
+});
