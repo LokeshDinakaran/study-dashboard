@@ -315,3 +315,4 @@ function closeFlashcard() {
 document
   .getElementById("closeFlashcardBtn")
   .addEventListener("click", closeFlashcard);
+
