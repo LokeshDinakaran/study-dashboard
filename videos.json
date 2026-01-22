@@ -4,14 +4,14 @@
       "name": "Tech Explained",
       "videos": [
         { "title": "Heat Transfer Basics", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-        { "title": "Thermal Conductivity Demo", "url": "https://www.youtube.com/embed/abcd1234" }
+        { "title": "Thermal Conductivity Demo", "url": "https://www.youtube.com/embed/5t7k2xJp5xA" }
       ]
     },
     {
       "name": "Music Vibes",
       "videos": [
-        { "title": "Relaxing Piano", "url": "https://www.youtube.com/embed/xyz5678" },
-        { "title": "Jazz Improvisation", "url": "https://www.youtube.com/embed/efgh5678" }
+        { "title": "Relaxing Piano", "url": "https://www.youtube.com/embed/4Tr0otuiQuU" },
+        { "title": "Jazz Improvisation", "url": "https://www.youtube.com/embed/MX0D4oZwCsA" }
       ]
     }
   ]
