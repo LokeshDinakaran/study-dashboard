@@ -1,147 +1,223 @@
-:root {
-  --bg-color: #f0f2f5;
-  --text-color: #000;
-  --card-bg: #fff;
-  --accent-color: #0073e6;
-}
+/* Layout & base */
 
-body.dark {
-  --bg-color: #181818;
-  --text-color: #f0f0f0;
-  --card-bg: #242424;
-  --accent-color: #1db954;
+* {
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: var(--bg-color);
-  color: var(--text-color);
   margin: 0;
-  padding: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #111;
 }
 
-header {
+main {
+  max-width: 1200px;
+  margin: 70px auto 40px auto;
+  padding: 0 16px;
+}
+
+/* Top bar */
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 0 16px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  z-index: 10;
 }
 
-.controls {
-  margin: 20px 0;
+/* Logo pinned to left, content centered */
+.top-bar > .logo {
+  position: absolute;
+  left: 16px;
 }
 
-input[type="text"] {
-  padding: 8px;
-  width: 60%;
-  margin-right: 10px;
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: #cc0000;
 }
 
-button {
-  padding: 8px 12px;
-  margin: 5px;
-  cursor: pointer;
-  background: var(--accent-color);
-  color: #fff;
+.search-area {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Inputs & buttons */
+
+#search {
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+}
+
+.pill-btn {
+  padding: 6px 12px;
+  border-radius: 16px;
   border: none;
-  border-radius: 5px;
-  transition: background 0.3s;
+  cursor: pointer;
+  font-size: 13px;
+  background-color: #cc0000;
+  color: #fff;
 }
 
-button:hover {
-  background: #005bb5;
+.pill-btn:hover {
+  background-color: #e60000;
 }
+
+.pill-btn.secondary {
+  background-color: #e5e5e5;
+  color: #111;
+}
+
+.pill-btn.secondary:hover {
+  background-color: #d5d5d5;
+}
+
+/* Reminder */
+
+.reminder {
+  margin: 16px 0;
+  font-size: 14px;
+  color: #c0392b;
+}
+
+/* Channels & videos */
 
 .channel {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
-.video-row {
+.channel-header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.channel-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.channel-controls {
+  display: flex;
+  gap: 8px;
   flex-wrap: wrap;
-  gap: 20px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
 }
 
 .video-card {
-  background: var(--card-bg);
-  border-radius: 10px;
-  padding: 10px;
-  width: 300px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.video-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.video-card iframe {
-  width: 100%;
-  height: 170px;
+  background-color: #fff;
   border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
 }
 
-#reminder {
+.player-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+}
+
+.player-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-info {
+  padding: 8px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.video-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.video-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Overlay / flashcard */
+
+.overlay {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background: #ffcc00;
-  padding: 10px;
-  border-radius: 5px;
-  font-weight: bold;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
 }
 
-/* 📱 Mobile layout adjustments */
-@media (max-width: 768px) {
-  body {
-    padding: 10px;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  h1 {
-    font-size: 1.4rem;
-  }
-
-  .controls {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  input[type="text"] {
-    width: 100%;
-  }
-
-  .video-row {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .video-card {
-    width: 100%;
-  }
-
-  .video-card iframe {
-    height: 200px;
-  }
-
-  button {
-    width: 100%;
-    font-size: 1rem;
-  }
+.hidden {
+  display: none !important;
 }
 
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.2rem;
-  }
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
 
-  .video-card iframe {
-    height: 180px;
+.card h2 {
+  margin-top: 0;
+}
+
+.card textarea {
+  width: 100%;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.card-actions {
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  main {
+    margin-top: 64px;
+  }
+  #search {
+    min-width: 140px;
   }
 }
