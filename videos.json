@@ -1,119 +1,20 @@
-// Example channels data (replace with your JSON or bookmarklet output)
 const channels = [
   {
     name: "Tech Explained",
     videos: [
       { title: "Heat Transfer Basics", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-      { title: "Thermal Conductivity Demo", url: "https://www.youtube.com/embed/5t7k2xJp5xA" }
+      { title: "Thermal Conductivity Demo", url: "https://www.youtube.com/embed/5t7k2xJp5xA" },
+      { title: "Convection Demo", url: "https://www.youtube.com/embed/2FmcHiLCwTU" },
+      { title: "Heat Exchanger Explained", url: "https://www.youtube.com/embed/8ZK3q4lYF9k" }
     ]
   },
   {
     name: "Music Vibes",
     videos: [
       { title: "Relaxing Piano", url: "https://www.youtube.com/embed/4Tr0otuiQuU" },
-      { title: "Jazz Improvisation", url: "https://www.youtube.com/embed/MX0D4oZwCsA" }
+      { title: "Jazz Improvisation", url: "https://www.youtube.com/embed/MX0D4oZwCsA" },
+      { title: "Lo-fi Chill Beats", url: "https://www.youtube.com/embed/jfKfPfyJRdk" },
+      { title: "Classical Guitar", url: "https://www.youtube.com/embed/2Vv-BfVoq4g" }
     ]
   }
 ];
-
-// Utility: shuffle and pick N random videos
-function getRandomVideos(videos, count = 8) {
-  const shuffled = [...videos].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, count);
-}
-
-// Render all channels
-function renderChannels() {
-  const container = document.getElementById("channels-container");
-  container.innerHTML = "";
-
-  channels.forEach((channel, idx) => {
-    const channelDiv = document.createElement("div");
-    channelDiv.className = "channel";
-
-    const header = document.createElement("h2");
-    header.textContent = channel.name;
-
-    // Shuffle button
-    const shuffleBtn = document.createElement("button");
-    shuffleBtn.textContent = "Shuffle Videos";
-    shuffleBtn.onclick = () => {
-      displayVideos(channelDiv, getRandomVideos(channel.videos));
-    };
-
-    channelDiv.appendChild(header);
-    channelDiv.appendChild(shuffleBtn);
-
-    container.appendChild(channelDiv);
-
-    // Show random 8 videos initially
-    displayVideos(channelDiv, getRandomVideos(channel.videos));
-  });
-
-  populateChannelSelect(channels);
-}
-
-// Display videos inside a channel container
-function displayVideos(channelDiv, videos) {
-  // Remove old video list if exists
-  let videoList = channelDiv.querySelector(".video-list");
-  if (videoList) videoList.remove();
-
-  videoList = document.createElement("div");
-  videoList.className = "video-list";
-
-  videos.forEach(video => {
-    const iframe = document.createElement("iframe");
-    iframe.src = video.url;
-    iframe.title = video.title;
-    iframe.width = "300";
-    iframe.height = "170";
-    iframe.frameBorder = "0";
-    iframe.allowFullscreen = true;
-
-    const caption = document.createElement("p");
-    caption.textContent = video.title;
-
-    const wrapper = document.createElement("div");
-    wrapper.className = "video-item";
-    wrapper.appendChild(iframe);
-    wrapper.appendChild(caption);
-
-    videoList.appendChild(wrapper);
-  });
-
-  channelDiv.appendChild(videoList);
-}
-
-// Populate dropdown for "Show All Videos"
-function populateChannelSelect(channels) {
-  const select = document.getElementById("channelSelect");
-  select.innerHTML = '<option value="">-- Show All Videos --</option>';
-  channels.forEach((ch, idx) => {
-    const opt = document.createElement("option");
-    opt.value = idx;
-    opt.textContent = ch.name;
-    select.appendChild(opt);
-  });
-}
-
-// Show all videos of selected channel
-function showAllVideos(channelIndex) {
-  if (channelIndex === "") return;
-  const channel = channels[channelIndex];
-  const container = document.getElementById("channels-container");
-  container.innerHTML = "";
-
-  const channelDiv = document.createElement("div");
-  channelDiv.className = "channel";
-
-  const header = document.createElement("h2");
-  header.textContent = channel.name;
-  channelDiv.appendChild(header);
-
-  displayVideos(channelDiv, channel.videos);
-  container.appendChild(channelDiv);
-}
-
-// Initialize page
-window.onload = renderChannels;
