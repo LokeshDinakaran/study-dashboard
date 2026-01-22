@@ -1,20 +1,18 @@
-const channels = [
-  {
-    name: "Tech Explained",
-    videos: [
-      { title: "Heat Transfer Basics", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-      { title: "Thermal Conductivity Demo", url: "https://www.youtube.com/embed/5t7k2xJp5xA" },
-      { title: "Convection Demo", url: "https://www.youtube.com/embed/2FmcHiLCwTU" },
-      { title: "Heat Exchanger Explained", url: "https://www.youtube.com/embed/8ZK3q4lYF9k" }
-    ]
-  },
-  {
-    name: "Music Vibes",
-    videos: [
-      { title: "Relaxing Piano", url: "https://www.youtube.com/embed/4Tr0otuiQuU" },
-      { title: "Jazz Improvisation", url: "https://www.youtube.com/embed/MX0D4oZwCsA" },
-      { title: "Lo-fi Chill Beats", url: "https://www.youtube.com/embed/jfKfPfyJRdk" },
-      { title: "Classical Guitar", url: "https://www.youtube.com/embed/2Vv-BfVoq4g" }
-    ]
-  }
-];
+{
+  "channels": [
+    {
+      "name": "Tech Explained",
+      "videos": [
+        { "title": "Heat Transfer Basics", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+        { "title": "Thermal Conductivity Demo", "url": "https://www.youtube.com/embed/abcd1234" }
+      ]
+    },
+    {
+      "name": "Music Vibes",
+      "videos": [
+        { "title": "Relaxing Piano", "url": "https://www.youtube.com/embed/xyz5678" },
+        { "title": "Jazz Improvisation", "url": "https://www.youtube.com/embed/efgh5678" }
+      ]
+    }
+  ]
+}
