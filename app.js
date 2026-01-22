@@ -1,7 +1,6 @@
 let allChannels = [];
 let watchLater = [];
 
-// Load videos.json
 fetch("videos.json")
   .then(res => res.json())
   .then(data => {
@@ -10,7 +9,6 @@ fetch("videos.json")
     startReminder();
   });
 
-// Render channels
 function renderChannels(channels) {
   const container = document.getElementById("channels-container");
   container.innerHTML = "";
@@ -24,32 +22,37 @@ function renderChannels(channels) {
     channelDiv.appendChild(title);
 
     channel.videos.forEach(video => {
+      const card = document.createElement("div");
+      card.className = "video-card";
+
+      const videoTitle = document.createElement("div");
+      videoTitle.className = "video-title";
+      videoTitle.textContent = video.title;
+
       const iframe = document.createElement("iframe");
-      iframe.width = "560";
       iframe.height = "315";
       iframe.src = video.url;
       iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
       iframe.allowFullscreen = true;
 
-      // Watch later button
       const btn = document.createElement("button");
       btn.textContent = "Add to Watch Later";
       btn.onclick = () => addToWatchLater(video);
 
-      // Flashcard trigger (simulate after play)
-      iframe.onload = () => {
-        iframe.addEventListener("ended", showFlashcard); // NOTE: YouTube iframe API needed for true ended event
-      };
+      const actions = document.createElement("div");
+      actions.className = "video-actions";
+      actions.appendChild(btn);
 
-      channelDiv.appendChild(iframe);
-      channelDiv.appendChild(btn);
+      card.appendChild(videoTitle);
+      card.appendChild(iframe);
+      card.appendChild(actions);
+      channelDiv.appendChild(card);
     });
 
     container.appendChild(channelDiv);
   });
 }
 
-// Search
 document.getElementById("search").addEventListener("input", e => {
   const term = e.target.value.toLowerCase();
   const filtered = allChannels.map(ch => ({
@@ -59,7 +62,6 @@ document.getElementById("search").addEventListener("input", e => {
   renderChannels(filtered);
 });
 
-// Shuffle
 function shuffleVideos() {
   allChannels.forEach(ch => {
     ch.videos.sort(() => Math.random() - 0.5);
@@ -67,7 +69,6 @@ function shuffleVideos() {
   renderChannels(allChannels);
 }
 
-// Watch Later
 function addToWatchLater(video) {
   watchLater.push(video);
   localStorage.setItem("watchLater", JSON.stringify(watchLater));
@@ -78,18 +79,35 @@ function showWatchLater() {
   renderChannels([{ name: "Watch Later", videos: saved }]);
 }
 
-// Reminder after 1 hour
 function startReminder() {
   setTimeout(() => {
     document.getElementById("reminder").textContent = "⏰ You’ve been watching for 1 hour!";
-  }, 3600000); // 1 hour
+  }, 3600000);
 }
 
-// Flashcard modal
 function showFlashcard() {
   document.getElementById("flashcard").classList.remove("hidden");
 }
 
 function closeFlashcard() {
   document.getElementById("flashcard").classList.add("hidden");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("closeBtn").addEventListener("click", closeFlashcard);
+});
+
+function onYouTubeIframeAPIReady() {
+  const iframes = document.querySelectorAll("iframe");
+  iframes.forEach((iframe, index) => {
+    new YT.Player(iframe, {
+      events: {
+        'onStateChange': event => {
+          if (event.data === YT.PlayerState.ENDED) {
+            showFlashcard();
+          }
+        }
+      }
+    });
+  });
 }
