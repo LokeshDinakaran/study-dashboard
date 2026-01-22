@@ -1,34 +1,44 @@
-<!-- trigger rebuild -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>My Study Dashboard</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>My Subscribed Channels</h1>
-    <button onclick="location.reload()">🔄 Refresh Page</button>
-    <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
+  <header class="top-bar">
+    <div class="logo">StudyTube</div>
+    <div class="search-area">
+      <input id="search" type="text" placeholder="Search videos..." />
+      <button id="refreshBtn" class="pill-btn secondary">Refresh</button>
+      <button id="globalModeBtn" class="pill-btn secondary">
+        View All (per channel)
+      </button>
+      <button id="shuffleBtn" class="pill-btn">Shuffle All</button>
+      <button id="watchLaterBtn" class="pill-btn secondary">Watch Later</button>
+    </div>
   </header>
 
-  <div class="controls">
-    <input type="text" id="search" placeholder="Search videos...">
-    <button onclick="showWatchLater()">View Watch Later</button>
-    <select id="channelSelect" onchange="showAllVideos(this.value)">
-      <option value="">-- Show All Videos --</option>
-    </select>
+  <main>
+    <section id="reminder" class="reminder"></section>
+
+    <section id="channels-container"></section>
+  </main>
+
+  <!-- Flashcard overlay -->
+  <div id="flashcard" class="overlay hidden">
+    <div class="card">
+      <h2>Quick Reflection</h2>
+      <p>What is one key idea you learned from this video?</p>
+      <textarea id="flashcardAnswer" rows="3" placeholder="Type a short answer..."></textarea>
+      <div class="card-actions">
+        <button id="closeFlashcardBtn" class="pill-btn">Done</button>
+      </div>
+    </div>
   </div>
 
-  <div id="channels-container"></div>
-  <div id="reminder"></div>
-
-  <!-- External scripts -->
-  <script src="videos.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
