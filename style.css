@@ -75,6 +75,10 @@ h1 {
   letter-spacing: 0.04em;
 }
 
+.highlight {
+  color: #a5b4fc;
+}
+
 .pill {
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -476,7 +480,7 @@ input[type="text"]:focus {
   gap: 6px;
 }
 
-/* ===== Mobile layout adjustments (from Copilot page) ===== */
+/* Mobile */
 
 @media (max-width: 768px) {
   body {
@@ -498,17 +502,7 @@ input[type="text"]:focus {
   }
 
   .side-panel {
-    order: -1; /* Stats on top for mobile */
-  }
-
-  .controls {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  input[type="text"] {
-    width: 100%;
+    order: -1;
   }
 
   .video-row {
@@ -529,8 +523,6 @@ input[type="text"]:focus {
     font-size: 0.9rem;
   }
 }
-
-/* Extra small screens */
 
 @media (max-width: 480px) {
   h1 {
