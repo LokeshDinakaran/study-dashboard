@@ -8,22 +8,27 @@
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
   <header>
     <h1>My Subscribed Channels</h1>
+    <button onclick="location.reload()">🔄 Refresh Page</button>
     <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
   </header>
 
   <div class="controls">
     <input type="text" id="search" placeholder="Search videos...">
     <button onclick="showWatchLater()">View Watch Later</button>
+    <select id="channelSelect" onchange="showAllVideos(this.value)">
+      <option value="">-- Show All Videos --</option>
+    </select>
   </div>
 
   <div id="channels-container"></div>
   <div id="reminder"></div>
 
+  <!-- External scripts -->
+  <script src="videos.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
