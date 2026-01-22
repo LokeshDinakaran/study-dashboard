@@ -1,111 +1,100 @@
-let allChannels = [];
+// Utility: shuffle and pick N random videos
+function getRandomVideos(videos, count = 8) {
+  const shuffled = [...videos].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+}
 
-fetch("videos.json")
-  .then(res => res.json())
-  .then(data => {
-    allChannels = data.channels;
-    renderChannels(allChannels);
-    startReminder();
-  });
-
-function renderChannels(channels) {
+// Render all channels
+function renderChannels() {
   const container = document.getElementById("channels-container");
   container.innerHTML = "";
 
-  channels.forEach(channel => {
+  channels.forEach((channel, idx) => {
     const channelDiv = document.createElement("div");
     channelDiv.className = "channel";
 
-    const title = document.createElement("h2");
-    title.textContent = channel.name;
-    title.style.cursor = "pointer";
-    title.onclick = () => renderChannels([channel]);
+    const header = document.createElement("h2");
+    header.textContent = channel.name;
 
+    // Shuffle button
     const shuffleBtn = document.createElement("button");
-    shuffleBtn.textContent = "🔀 Shuffle";
+    shuffleBtn.textContent = "Shuffle Videos";
     shuffleBtn.onclick = () => {
-      channel.videos.sort(() => Math.random() - 0.5);
-      renderChannels(allChannels);
+      displayVideos(channelDiv, getRandomVideos(channel.videos));
     };
 
-    channelDiv.appendChild(title);
+    channelDiv.appendChild(header);
     channelDiv.appendChild(shuffleBtn);
 
-    const row = document.createElement("div");
-    row.className = "video-row";
-
-    channel.videos.forEach(video => {
-      const card = document.createElement("div");
-      card.className = "video-card";
-
-      const iframe = document.createElement("iframe");
-      iframe.src = video.url;
-      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-      iframe.allowFullscreen = true;
-
-      const btn = document.createElement("button");
-      btn.textContent = "Add to Watch Later";
-      btn.onclick = () => addToWatchLater(video);
-
-      card.appendChild(iframe);
-      card.appendChild(btn);
-      row.appendChild(card);
-    });
-
-    channelDiv.appendChild(row);
     container.appendChild(channelDiv);
+
+    // Show random 8 videos initially
+    displayVideos(channelDiv, getRandomVideos(channel.videos));
   });
 
-  // Add back button if only one channel is shown
-  if (channels.length === 1) {
-    const backBtn = document.createElement("button");
-    backBtn.textContent = "⬅️ Back to All Channels";
-    backBtn.onclick = () => renderChannels(allChannels);
-    container.prepend(backBtn);
-  }
+  populateChannelSelect(channels);
 }
 
-document.getElementById("search").addEventListener("input", e => {
-  const term = e.target.value.toLowerCase();
-  const filtered = allChannels.map(ch => ({
-    ...ch,
-    videos: ch.videos.filter(v => v.title.toLowerCase().includes(term))
-  }));
-  renderChannels(filtered);
-});
+// Display videos inside a channel container
+function displayVideos(channelDiv, videos) {
+  let videoList = channelDiv.querySelector(".video-list");
+  if (videoList) videoList.remove();
 
-function showWatchLater() {
-  const saved = JSON.parse(localStorage.getItem("watchLater")) || [];
-  renderChannels([{ name: "Watch Later", videos: saved }]);
+  videoList = document.createElement("div");
+  videoList.className = "video-list";
+
+  videos.forEach(video => {
+    const iframe = document.createElement("iframe");
+    iframe.src = video.url;
+    iframe.title = video.title;
+    iframe.width = "300";
+    iframe.height = "170";
+    iframe.frameBorder = "0";
+    iframe.allowFullscreen = true;
+
+    const caption = document.createElement("p");
+    caption.textContent = video.title;
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "video-item";
+    wrapper.appendChild(iframe);
+    wrapper.appendChild(caption);
+
+    videoList.appendChild(wrapper);
+  });
+
+  channelDiv.appendChild(videoList);
 }
 
-function addToWatchLater(video) {
-  const saved = JSON.parse(localStorage.getItem("watchLater")) || [];
-  const alreadySaved = saved.some(v => v.url === video.url);
-  if (!alreadySaved) {
-    saved.push(video);
-    localStorage.setItem("watchLater", JSON.stringify(saved));
-  }
+// Populate dropdown for "Show All Videos"
+function populateChannelSelect(channels) {
+  const select = document.getElementById("channelSelect");
+  select.innerHTML = '<option value="">-- Show All Videos --</option>';
+  channels.forEach((ch, idx) => {
+    const opt = document.createElement("option");
+    opt.value = idx;
+    opt.textContent = ch.name;
+    select.appendChild(opt);
+  });
 }
 
-function startReminder() {
-  setTimeout(() => {
-    document.getElementById("reminder").textContent = "⏰ You’ve been watching for 1 hour!";
-  }, 3600000);
+// Show all videos of selected channel
+function showAllVideos(channelIndex) {
+  if (channelIndex === "") return;
+  const channel = channels[channelIndex];
+  const container = document.getElementById("channels-container");
+  container.innerHTML = "";
+
+  const channelDiv = document.createElement("div");
+  channelDiv.className = "channel";
+
+  const header = document.createElement("h2");
+  header.textContent = channel.name;
+  channelDiv.appendChild(header);
+
+  displayVideos(channelDiv, channel.videos);
+  container.appendChild(channelDiv);
 }
 
-// Dark mode toggle
-document.getElementById("darkModeToggle").addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-});
-
-// Keyboard shortcuts
-document.addEventListener("keydown", e => {
-  if (e.key === "/") {
-    e.preventDefault();
-    document.getElementById("search").focus();
-  }
-  if (e.key.toLowerCase() === "w") {
-    showWatchLater();
-  }
-});
+// Initialize page
+window.onload = renderChannels;
