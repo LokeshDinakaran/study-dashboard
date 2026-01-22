@@ -1,31 +1,119 @@
-<!-- trigger rebuild -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Study Dashboard</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://www.youtube.com/iframe_api"></script>
+  <meta charset="UTF-8" />
+  <title>Learning Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo" class="logo">
-    <h1>My Subscribed Channels</h1>
-    <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
-  </header>
+  <div class="shell">
+    <header>
+      <div class="title-block">
+        <div class="pill">Focused Learning</div>
+        <h1>Thermal & FEM Dashboard</h1>
+        <p class="subtitle">
+          Track, filter, and continue your learning videos in one <span class="highlight">place</span>.
+        </p>
+      </div>
 
-  <div class="controls">
-    <input type="text" id="search" placeholder="Search videos...">
-    <button onclick="shuffleVideos()">Shuffle</button>
-    <button onclick="showWatchLater()">View Watch Later</button>
+      <div class="top-buttons">
+        <button id="toggleTheme" class="btn-icon" title="Toggle dark mode">
+          🌙
+        </button>
+        <button id="resetAll" class="btn-ghost">Reset</button>
+        <button id="shuffleOne" class="btn-primary">
+          🎯 Surprise Me
+        </button>
+      </div>
+    </header>
+
+    <main class="main-grid">
+      <!-- Left: Videos panel -->
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <div class="panel-title">Video library</div>
+            <div class="mode-badge">
+              <span class="mode-dot"></span>
+              Smart playlist active
+            </div>
+          </div>
+          <div class="panel-chip" id="countChip">
+            0 videos
+          </div>
+        </div>
+
+        <div class="search-row">
+          <div class="search-wrapper">
+            <span>🔍</span>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search by title, topic or tag…"
+            />
+          </div>
+
+          <button id="filterThermal" class="btn-soft">
+            🔥 <span>Thermal</span>
+          </button>
+          <button id="filterFEM" class="btn-soft">
+            📐 <span>FEM</span>
+          </button>
+          <button id="sortBtn" class="btn-soft">
+            ⬇️ <span id="sortText">Sort: Default</span>
+          </button>
+        </div>
+
+        <div class="video-row" id="videoRow">
+          <!-- Cards from app.js -->
+        </div>
+      </section>
+
+      <!-- Right: Stats / controls -->
+      <aside class="panel side-panel">
+        <div class="panel-header">
+          <div class="panel-title">Session overview</div>
+          <span class="panel-chip" id="sessionStatus">Idle</span>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-label">Total videos</div>
+            <div class="stat-value" id="statTotal">0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Thermal</div>
+            <div class="stat-value" id="statThermal">0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">FEM</div>
+            <div class="stat-value" id="statFEM">0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Watch later</div>
+            <div class="stat-value" id="statWatchLater">0</div>
+          </div>
+        </div>
+
+        <div class="side-actions">
+          <button id="startSession" class="btn-primary full">
+            ▶ Start Focus Session
+          </button>
+          <button id="clearWatchLater" class="btn-ghost full">
+            🧹 Clear Watch Later
+          </button>
+        </div>
+
+        <div class="chip-list">
+          <span class="chip small">Tap a card → Open YouTube</span>
+          <span class="chip small">⭐ Add to Watch Later</span>
+          <span class="chip small">Use search + filters</span>
+        </div>
+      </aside>
+    </main>
   </div>
 
-  <div id="channels-container"></div>
-  <div id="reminder"></div>
-
-  <script src="app.js"></script>
+  <script src="app.js" type="module"></script>
 </body>
 </html>
