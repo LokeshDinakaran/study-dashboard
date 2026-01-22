@@ -1,601 +1,119 @@
-{
-  "channels": [
-    {
-      "name": "3blue1brown",
-      "videos": [
-  {
-    "title": "Why Laplace transforms are so useful",
-    "url": "https://www.youtube.com/embed/FE-hM1kRK4Y"
-  },
-  {
-    "title": "But what is a Laplace Transform?",
-    "url": "https://www.youtube.com/embed/j0wJBEZdwLs"
-  },
-  {
-    "title": "The Physics of Euler's Formula | Laplace Transform Prelude",
-    "url": "https://www.youtube.com/embed/-j8PzkZ70Lg"
-  },
-  {
-    "title": "What was Euclid really doing? | Guest video by Ben Syversen",
-    "url": "https://www.youtube.com/embed/M-MgQC6z3VU"
-  },
-  {
-    "title": "Exploration & Epiphany | Guest video by Paul Dancstep",
-    "url": "https://www.youtube.com/embed/_BrFKp-U8GI"
-  },
-  {
-    "title": "Simulating and understanding phase change | Guest video by Vilas Winstein",
-    "url": "https://www.youtube.com/embed/itRV2jEtV8Q"
-  },
-  {
-    "title": "The AI that solved IMO Geometry Problems | Guest video by @Aleph 0",
-    "url": "https://www.youtube.com/embed/4NlrfOl0l8U"
-  },
-  {
-    "title": "But how do AI images and videos actually work? | Guest video by Welch Labs",
-    "url": "https://www.youtube.com/embed/iv-5mZ_9CPY"
-  },
-  {
-    "title": "Where my explanation of Grover’s algorithm failed",
-    "url": "https://www.youtube.com/embed/Dlsa9EBKDGI"
-  },
-  {
-    "title": "But what is quantum computing?  (Grover's Algorithm)",
-    "url": "https://www.youtube.com/embed/RQWpF2Gb-gU"
-  },
-  {
-    "title": "Why colliding blocks compute pi",
-    "url": "https://www.youtube.com/embed/6dTyOl1fmDo"
-  },
-  {
-    "title": "Terence Tao continuing history’s cleverest cosmological measurements",
-    "url": "https://www.youtube.com/embed/hFMaT9oRbs4"
-  },
-  {
-    "title": "Terence Tao on the cosmic distance ladder",
-    "url": "https://www.youtube.com/embed/YdOXS_9_P4U"
-  },
-  {
-    "title": "This open problem taught me what topology is",
-    "url": "https://www.youtube.com/embed/IQqtsm-bBRU"
-  },
-  {
-    "title": "Large Language Models explained briefly",
-    "url": "https://www.youtube.com/embed/LPZh9BOjkQs"
-  },
-  {
-    "title": "Five puzzles for thinking outside the box",
-    "url": "https://www.youtube.com/embed/piJkuavhV50"
-  },
-  {
-    "title": "How I animate 3Blue1Brown | A Manim demo with Ben Sparks",
-    "url": "https://www.youtube.com/embed/rbu7Zu5X1zI"
-  },
-  {
-    "title": "How are holograms possible?",
-    "url": "https://www.youtube.com/embed/EmKQsSDlaa4"
-  },
-  {
-    "title": "How might LLMs store facts | Deep Learning Chapter 7",
-    "url": "https://www.youtube.com/embed/9-Jl0dxWQs8"
-  },
-  {
-    "title": "What \"Follow Your Dreams\" Misses | Harvey Mudd Commencement Speech 2024",
-    "url": "https://www.youtube.com/embed/W3I3kAg2J7w"
-  },
-  {
-    "title": "Attention in transformers, step-by-step | Deep Learning Chapter 6",
-    "url": "https://www.youtube.com/embed/eMlx5fFNoYc"
-  },
-  {
-    "title": "Transformers, the tech behind LLMs | Deep Learning Chapter 5",
-    "url": "https://www.youtube.com/embed/wjZofJX0v4M"
-  },
-  {
-    "title": "Answering viewer questions about refraction",
-    "url": "https://www.youtube.com/embed/Cz4Q4QOuoo8"
-  },
-  {
-    "title": "But why would light \"slow down\"? | Visualizing Feynman's lecture on the refractive index",
-    "url": "https://www.youtube.com/embed/KTzGBJPuJwM"
-  },
-  {
-    "title": "25 Math explainers you may enjoy | SoME3 results",
-    "url": "https://www.youtube.com/embed/6a1fLEToyvU"
-  },
-  {
-    "title": "How wiggling charges give rise to light",
-    "url": "https://www.youtube.com/embed/aXRTczANuIs"
-  },
-  {
-    "title": "This tests your understanding of light | The barber pole effect",
-    "url": "https://www.youtube.com/embed/QCX62YJCmGk"
-  },
-  {
-    "title": "A pretty reason why Gaussian + Gaussian = Gaussian",
-    "url": "https://www.youtube.com/embed/d_qvLDhkg00"
-  },
-  {
-    "title": "This pattern breaks, but for a good reason | Moser's circle problem",
-    "url": "https://www.youtube.com/embed/YtkIWDE36qU"
-  },
-  {
-    "title": "How They Fool Ya (live) | Math parody of Hallelujah",
-    "url": "https://www.youtube.com/embed/NOCsdhzo6Jg"
-  },
-  {
-    "title": "Convolutions | Why X+Y in probability is a beautiful mess",
-    "url": "https://www.youtube.com/embed/IaSGqQa5O-M"
-  },
-  {
-    "title": "Why π is in the normal distribution (beyond integral tricks)",
-    "url": "https://www.youtube.com/embed/cy8r7WSuT1I"
-  },
-  {
-    "title": "But what is the Central Limit Theorem?",
-    "url": "https://www.youtube.com/embed/zeJD6dqJ5lo"
-  },
-  {
-    "title": "But what is a convolution?",
-    "url": "https://www.youtube.com/embed/KuXjwB4LzSA"
-  },
-  {
-    "title": "Researchers thought this was a bug (Borwein integrals)",
-    "url": "https://www.youtube.com/embed/851U557j6HE"
-  },
-  {
-    "title": "What makes a great math explanation? | SoME2 results",
-    "url": "https://www.youtube.com/embed/cDofhN-RJqg"
-  },
-  {
-    "title": "How to lie using visual proofs",
-    "url": "https://www.youtube.com/embed/VYQVlVoWoPY"
-  },
-  {
-    "title": "Olympiad level counting  (Generating functions)",
-    "url": "https://www.youtube.com/embed/bOXCLR3Wric"
-  },
-  {
-    "title": "Oh, wait, actually the best Wordle opener is not “crane”…",
-    "url": "https://www.youtube.com/embed/fRed0Xmc2Wg"
-  },
-  {
-    "title": "Solving Wordle using information theory",
-    "url": "https://www.youtube.com/embed/v68zYyaEmEA"
-  },
-  {
-    "title": "A tale of two problem solvers | Average cube shadow area",
-    "url": "https://www.youtube.com/embed/ltLUadnCyi0"
-  },
-  {
-    "title": "2021 Summer of Math Exposition results",
-    "url": "https://www.youtube.com/embed/F3Qixy-r_rQ"
-  },
-  {
-    "title": "Beyond the Mandelbrot set, an intro to holomorphic dynamics",
-    "url": "https://www.youtube.com/embed/LqbZpur38nw"
-  },
-  {
-    "title": "Newton’s fractal (which Newton knew nothing about)",
-    "url": "https://www.youtube.com/embed/-RdOwhmqP5s"
-  },
-  {
-    "title": "Make math videos! | Summer of Math Exposition announcement",
-    "url": "https://www.youtube.com/embed/ojjzXyQCzso"
-  },
-  {
-    "title": "A quick trick for computing eigenvalues | Chapter 15, Essence of linear algebra",
-    "url": "https://www.youtube.com/embed/e50Bj7jn9IQ"
-  },
-  {
-    "title": "How (and why) to raise e to the power of a matrix | DE6",
-    "url": "https://www.youtube.com/embed/O85OWBJ2ayo"
-  },
-  {
-    "title": "The medical test paradox, and redesigning Bayes' rule",
-    "url": "https://www.youtube.com/embed/lG4VkPoG3ko"
-  },
-  {
-    "title": "Hamming codes part 2: The one-line implementation",
-    "url": "https://www.youtube.com/embed/b3NxrZOu_CE"
-  },
-  {
-    "title": "But what are Hamming codes? The origin of error correction",
-    "url": "https://www.youtube.com/embed/X8jsijhllIA"
-  },
-  {
-    "title": "Group theory, abstraction, and the 196,883-dimensional monster",
-    "url": "https://www.youtube.com/embed/mH0oCDa74tE"
-  },
-  {
-    "title": "The impossible chessboard puzzle",
-    "url": "https://www.youtube.com/embed/wTJI_WuZSwE"
-  },
-  {
-    "title": "The DP-3T algorithm for contact tracing (with Nicky Case)",
-    "url": "https://www.youtube.com/embed/D__UaR5MQao"
-  },
-  {
-    "title": "Lockdown math announcement",
-    "url": "https://www.youtube.com/embed/ppWPuXsnf1Q"
-  },
-  {
-    "title": "Why “probability of 0” does not mean “impossible” | Probabilities of probabilities, part 2",
-    "url": "https://www.youtube.com/embed/ZA4JkHKZM50"
-  },
-  {
-    "title": "Simulating an epidemic",
-    "url": "https://www.youtube.com/embed/gxAaO2rsdIs"
-  },
-  {
-    "title": "Binomial distributions | Probabilities of probabilities, part 1",
-    "url": "https://www.youtube.com/embed/8idr1WZ1A7Q"
-  },
-  {
-    "title": "Exponential growth and epidemics",
-    "url": "https://www.youtube.com/embed/Kas0tIxDvrg"
-  },
-  {
-    "title": "The quick proof of Bayes' theorem",
-    "url": "https://www.youtube.com/embed/U_85TaXbeIo"
-  },
-  {
-    "title": "Bayes theorem, the geometry of changing beliefs",
-    "url": "https://www.youtube.com/embed/HZGCoVF3YvM"
-  },
-  {
-    "title": "Q&A with Grant, windy walk edition",
-    "url": "https://www.youtube.com/embed/Agbh95KyWxY"
-  },
-  {
-    "title": "Why do prime numbers make these spirals? | Dirichlet’s theorem and pi approximations",
-    "url": "https://www.youtube.com/embed/EK32jo7i5LQ"
-  },
-  {
-    "title": "The unexpectedly hard windmill question (2011 IMO, Q2)",
-    "url": "https://www.youtube.com/embed/M64HUIJFTZM"
-  },
-  {
-    "title": "e^(iπ) in 3.14 minutes, using dynamics | DE5",
-    "url": "https://www.youtube.com/embed/v0YEaeIClKY"
-  },
-  {
-    "title": "Pure Fourier series animation montage",
-    "url": "https://www.youtube.com/embed/-qgreAUpPwM"
-  },
-  {
-    "title": "But what is a Fourier series?  From heat flow to drawing with circles | DE4",
-    "url": "https://www.youtube.com/embed/r6sGWTCMz2k"
-  },
-  {
-    "title": "Solving the heat equation | DE3",
-    "url": "https://www.youtube.com/embed/ToIXSwZ1pJU"
-  },
-  {
-    "title": "But what is a partial differential equation?  | DE2",
-    "url": "https://www.youtube.com/embed/ly4S0oi3Yz8"
-  },
-  {
-    "title": "Differential equations, a tourist's guide | DE1",
-    "url": "https://www.youtube.com/embed/p_di4Zn4wz4"
-  },
-  {
-    "title": "Cramer's rule, explained geometrically | Chapter 12, Essence of linear algebra",
-    "url": "https://www.youtube.com/embed/jBsC34PxzoM"
-  },
-  {
-    "title": "How colliding blocks act like a beam of light...to compute pi.",
-    "url": "https://www.youtube.com/embed/brU5yLm9DZM"
-  },
-  {
-    "title": "The most unexpected answer to a counting puzzle",
-    "url": "https://www.youtube.com/embed/HEfHFsfGXjs"
-  },
-  {
-    "title": "But why is a sphere's surface area four times its shadow?",
-    "url": "https://www.youtube.com/embed/GNcFjFmqEc8"
-  },
-  {
-    "title": "Using topology for discrete problems | The Borsuk-Ulam theorem and stolen necklaces",
-    "url": "https://www.youtube.com/embed/yuVqxCSsE7c"
-  },
-  {
-    "title": "Why 5/3 is a fundamental constant for turbulence",
-    "url": "https://www.youtube.com/embed/_UoTTq651dE"
-  },
-  {
-    "title": "Quaternions and 3d rotation, explained interactively",
-    "url": "https://www.youtube.com/embed/zjMuIxRvygQ"
-  },
-  {
-    "title": "Visualizing the 4d numbers Quaternions",
-    "url": "https://www.youtube.com/embed/d4EgbgTm0Bg"
-  },
-  {
-    "title": "Q&A with Grant Sanderson (3blue1brown)",
-    "url": "https://www.youtube.com/embed/Qe6o9j4IjTo"
-  },
-  {
-    "title": "Why slicing a cone gives an ellipse (beautiful proof)",
-    "url": "https://www.youtube.com/embed/pQa_tWZmlGs"
-  },
-  {
-    "title": "Other math channels you'd enjoy",
-    "url": "https://www.youtube.com/embed/VcgJro0sTiM"
-  },
-  {
-    "title": "Divergence and curl:  The language of Maxwell's equations, fluid flow, and more",
-    "url": "https://www.youtube.com/embed/rB83DpBJQsE"
-  },
-  {
-    "title": "The other way to visualize derivatives | Chapter 12, Essence of calculus",
-    "url": "https://www.youtube.com/embed/CfW845LNObM"
-  },
-  {
-    "title": "The Wallis product for pi, proved geometrically",
-    "url": "https://www.youtube.com/embed/8GPy_UMV-08"
-  },
-  {
-    "title": "Winding numbers and domain coloring",
-    "url": "https://www.youtube.com/embed/b7FxPsqfkOY"
-  },
-  {
-    "title": "How pi was almost 6.283185...",
-    "url": "https://www.youtube.com/embed/bcPTiiiYDs8"
-  },
-  {
-    "title": "Why is pi here?  And why is it squared?  A geometric answer to the Basel problem",
-    "url": "https://www.youtube.com/embed/d-o3eB9sfls"
-  },
-  {
-    "title": "The more general uncertainty principle, regarding Fourier transforms",
-    "url": "https://www.youtube.com/embed/MBnnXbOM5S4"
-  },
-  {
-    "title": "But what is the Fourier Transform?  A visual introduction.",
-    "url": "https://www.youtube.com/embed/spUNpyF58BY"
-  },
-  {
-    "title": "Why this puzzle is impossible",
-    "url": "https://www.youtube.com/embed/VvCytJvd4H0"
-  },
-  {
-    "title": "Q&A #2 + Net Neutrality Nuance",
-    "url": "https://www.youtube.com/embed/liL66CApESk"
-  },
-  {
-    "title": "The hardest problem on the hardest test",
-    "url": "https://www.youtube.com/embed/OkmNXy7er84"
-  },
-  {
-    "title": "Backpropagation calculus | Deep Learning Chapter 4",
-    "url": "https://www.youtube.com/embed/tIeHLnjs5U8"
-  },
-  {
-    "title": "Backpropagation, intuitively | Deep Learning Chapter 3",
-    "url": "https://www.youtube.com/embed/Ilg3gGewQ5U"
-  },
-  {
-    "title": "Gradient descent, how neural networks learn | Deep Learning Chapter 2",
-    "url": "https://www.youtube.com/embed/IHZwWFHWa-w"
-  },
-  {
-    "title": "But what is a neural network? | Deep learning chapter 1",
-    "url": "https://www.youtube.com/embed/aircAruvnKk"
-  },
-  {
-    "title": "Some light quantum mechanics (with minutephysics)",
-    "url": "https://www.youtube.com/embed/MzRCDLre1b4"
-  },
-  {
-    "title": "Thinking outside the 10-dimensional box",
-    "url": "https://www.youtube.com/embed/zwAD6dRSVyI"
-  },
-  {
-    "title": "Hilbert's Curve: Is infinite math useful?",
-    "url": "https://www.youtube.com/embed/3s7h2MHQtxc"
-  },
-  {
-    "title": "How secure is 256 bit security?",
-    "url": "https://www.youtube.com/embed/S9JGmA5_unY"
-  },
-  {
-    "title": "But how does bitcoin actually work?",
-    "url": "https://www.youtube.com/embed/bBC-nXj3Ng4"
-  },
-  {
-    "title": "All possible pythagorean triples, visualized",
-    "url": "https://www.youtube.com/embed/QJYmyhnaaek"
-  },
-  {
-    "title": "Pi hiding in prime regularities",
-    "url": "https://www.youtube.com/embed/NaL_Cb42WyY"
-  },
-  {
-    "title": "Taylor series | Chapter 11, Essence of calculus",
-    "url": "https://www.youtube.com/embed/3d6DsjIBzJ4"
-  },
-  {
-    "title": "Higher order derivatives | Chapter 10, Essence of calculus",
-    "url": "https://www.youtube.com/embed/BLkz5LGWihw"
-  },
-  {
-    "title": "What does area have to do with slope? | Chapter 9, Essence of calculus",
-    "url": "https://www.youtube.com/embed/FnJqaIESC2s"
-  },
-  {
-    "title": "Integration and the fundamental theorem of calculus | Chapter 8, Essence of calculus",
-    "url": "https://www.youtube.com/embed/rfG8ce4nNh0"
-  },
-  {
-    "title": "Limits, L'Hôpital's rule, and epsilon delta definitions | Chapter 7, Essence of calculus",
-    "url": "https://www.youtube.com/embed/kfF40MiS7zA"
-  },
-  {
-    "title": "Implicit differentiation, what's going on here? | Chapter 6, Essence of calculus",
-    "url": "https://www.youtube.com/embed/qb40J4N1fa4"
-  },
-  {
-    "title": "What's so special about Euler's number e? | Chapter 5, Essence of calculus",
-    "url": "https://www.youtube.com/embed/m2MIpDrF7Es"
-  },
-  {
-    "title": "Visualizing the chain rule and product rule | Chapter 4, Essence of calculus",
-    "url": "https://www.youtube.com/embed/YG15m2VwSjA"
-  },
-  {
-    "title": "Derivative formulas through geometry | Chapter 3, Essence of calculus",
-    "url": "https://www.youtube.com/embed/S0_qX4VJhMQ"
-  },
-  {
-    "title": "The paradox of the derivative | Chapter 2, Essence of calculus",
-    "url": "https://www.youtube.com/embed/9vKqVkMQHKk"
-  },
-  {
-    "title": "The essence of calculus",
-    "url": "https://www.youtube.com/embed/WUvTyaaNkzM"
-  },
-  {
-    "title": "Euler's formula with introductory group theory",
-    "url": "https://www.youtube.com/embed/mvmuCPvRoWQ"
-  },
-  {
-    "title": "Fractals are typically not self-similar",
-    "url": "https://www.youtube.com/embed/gB9n2gHsHN4"
-  },
-  {
-    "title": "Tattoos on Math",
-    "url": "https://www.youtube.com/embed/IxNb1WG_Ido"
-  },
-  {
-    "title": "But what is the Riemann zeta function? Visualizing analytic continuation",
-    "url": "https://www.youtube.com/embed/sD0NjbwqlYw"
-  },
-  {
-    "title": "Binary, Hanoi, and Sierpinski, part 2",
-    "url": "https://www.youtube.com/embed/bdMfjfT0lKk"
-  },
-  {
-    "title": "Binary, Hanoi and Sierpinski, part 1",
-    "url": "https://www.youtube.com/embed/2SUvWfNJSsM"
-  },
-  {
-    "title": "3blue1brown channel trailer",
-    "url": "https://www.youtube.com/embed/R7p-nPg8t_g"
-  },
-  {
-    "title": "Who cares about topology?   (Old version)",
-    "url": "https://www.youtube.com/embed/AmgkSdhK4K8"
-  },
-  {
-    "title": "Abstract vector spaces | Chapter 16, Essence of linear algebra",
-    "url": "https://www.youtube.com/embed/TgKwz5Ikpc8"
-  },
-  {
-    "title": "Eigenvectors and eigenvalues | Chapter 14, Essence of linear algebra",
-    "url": "https://www.youtube.com/embed/PFDu9oVAE-g"
-  },
-  {
-    "title": "Change of basis | Chapter 13, Essence of linear algebra",
-    "url": "https://www.youtube.com/embed/P2LTAUO1TdA"
-  },
-  {
-    "title": "Cross products | Chapter 10, Essence of linear algebra",
-    "url": "https://www.youtube.com/embed/eu6i7WJeinw"
-  },
-  {
-    "title": "Cross products in the light of linear transformations | Chapter 11, Essence of linear algebra",
-    "url": "https://www.youtube.com/embed/BaM7OCEm3G0"
-  },
-  {
-    "title": "Dot products and duality | Chapter 9, Essence of linear algebra",
-    "url": "https://www.youtube.com/embed/LyGKycYT2v0"
-  },
-  {
-    "title": "Nonsquare matrices as transformations between dimensions | Chapter 8, Essence of linear algebra",
-    "url": "https://www.youtube.com/embed/v8VSDg_WQlA"
-  },
-  {
-    "title": "Inverse matrices, column space and null space | Chapter 7, Essence of linear algebra",
-    "url": "https://www.youtube.com/embed/uQhTuRlWMxw"
-  },
-  {
-    "title": "The determinant | Chapter 6, Essence of linear algebra",
-    "url": "https://www.youtube.com/embed/Ip3X9LOh2dk"
-  },
-  {
-    "title": "Three-dimensional linear transformations | Chapter 5, Essence of linear algebra",
-    "url": "https://www.youtube.com/embed/rHLEWRxRGiM"
-  },
-  {
-    "title": "Matrix multiplication as composition | Chapter 4, Essence of linear algebra",
-    "url": "https://www.youtube.com/embed/XkY2DOUCWMU"
-  },
-  {
-    "title": "Linear transformations and matrices | Chapter 3, Essence of linear algebra",
-    "url": "https://www.youtube.com/embed/kYB8IZa5AuE"
-  },
-  {
-    "title": "Linear combinations, span, and basis vectors | Chapter 2, Essence of linear algebra",
-    "url": "https://www.youtube.com/embed/k7RM-ot2NWY"
-  },
-  {
-    "title": "Vectors | Chapter 1, Essence of linear algebra",
-    "url": "https://www.youtube.com/embed/fNk_zzaMoSs"
-  },
-  {
-    "title": "Essence of linear algebra preview",
-    "url": "https://www.youtube.com/embed/kjBOesZCoqc"
-  },
-  {
-    "title": "Triangle of Power",
-    "url": "https://www.youtube.com/embed/sULa9Lc4pck"
-  },
-  {
-    "title": "Snell's law proof using springs",
-    "url": "https://www.youtube.com/embed/Iq1a_KJTWJ8"
-  },
-  {
-    "title": "The Brachistochrone, with Steven Strogatz",
-    "url": "https://www.youtube.com/embed/Cld0p3a43fU"
-  },
-  {
-    "title": "Fractal charm: Space filling curves",
-    "url": "https://www.youtube.com/embed/RU0wScIj36o"
-  },
-  {
-    "title": "Music And Measure Theory",
-    "url": "https://www.youtube.com/embed/cyW5z-M2yzw"
-  },
-  {
-    "title": "How to count to 1000 on two hands",
-    "url": "https://www.youtube.com/embed/1SMmc9gQmHQ"
-  },
-  {
-    "title": "What does it feel like to invent math?",
-    "url": "https://www.youtube.com/embed/XFDM1ip5HdU"
-  },
-  {
-    "title": "Euler's Formula and Graph Duality",
-    "url": "https://www.youtube.com/embed/-9OUyo8NFZg"
-  },
-  {
-    "title": "Euler's Formula Poem",
-    "url": "https://www.youtube.com/embed/zLzLxVeqdQg"
-  },
-  {
-    "title": "e to the pi i, a nontraditional take (old version)",
-    "url": "https://www.youtube.com/embed/F_0yfvm0UoU"
+// Example channels data (replace with your JSON or bookmarklet output)
+const channels = [
+  {
+    name: "Tech Explained",
+    videos: [
+      { title: "Heat Transfer Basics", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+      { title: "Thermal Conductivity Demo", url: "https://www.youtube.com/embed/5t7k2xJp5xA" }
+    ]
+  },
+  {
+    name: "Music Vibes",
+    videos: [
+      { title: "Relaxing Piano", url: "https://www.youtube.com/embed/4Tr0otuiQuU" },
+      { title: "Jazz Improvisation", url: "https://www.youtube.com/embed/MX0D4oZwCsA" }
+    ]
   }
-]
-    },
-    {
-      "name": "Music Vibes",
-      "videos": [
-        { "title": "Relaxing Piano", "url": "https://www.youtube.com/embed/4Tr0otuiQuU" },
-        { "title": "Jazz Improvisation", "url": "https://www.youtube.com/embed/MX0D4oZwCsA" }
-      ]
-    }
-  ]
+];
+
+// Utility: shuffle and pick N random videos
+function getRandomVideos(videos, count = 8) {
+  const shuffled = [...videos].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
 }
 
+// Render all channels
+function renderChannels() {
+  const container = document.getElementById("channels-container");
+  container.innerHTML = "";
+
+  channels.forEach((channel, idx) => {
+    const channelDiv = document.createElement("div");
+    channelDiv.className = "channel";
+
+    const header = document.createElement("h2");
+    header.textContent = channel.name;
+
+    // Shuffle button
+    const shuffleBtn = document.createElement("button");
+    shuffleBtn.textContent = "Shuffle Videos";
+    shuffleBtn.onclick = () => {
+      displayVideos(channelDiv, getRandomVideos(channel.videos));
+    };
+
+    channelDiv.appendChild(header);
+    channelDiv.appendChild(shuffleBtn);
+
+    container.appendChild(channelDiv);
+
+    // Show random 8 videos initially
+    displayVideos(channelDiv, getRandomVideos(channel.videos));
+  });
+
+  populateChannelSelect(channels);
+}
+
+// Display videos inside a channel container
+function displayVideos(channelDiv, videos) {
+  // Remove old video list if exists
+  let videoList = channelDiv.querySelector(".video-list");
+  if (videoList) videoList.remove();
+
+  videoList = document.createElement("div");
+  videoList.className = "video-list";
+
+  videos.forEach(video => {
+    const iframe = document.createElement("iframe");
+    iframe.src = video.url;
+    iframe.title = video.title;
+    iframe.width = "300";
+    iframe.height = "170";
+    iframe.frameBorder = "0";
+    iframe.allowFullscreen = true;
+
+    const caption = document.createElement("p");
+    caption.textContent = video.title;
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "video-item";
+    wrapper.appendChild(iframe);
+    wrapper.appendChild(caption);
+
+    videoList.appendChild(wrapper);
+  });
+
+  channelDiv.appendChild(videoList);
+}
+
+// Populate dropdown for "Show All Videos"
+function populateChannelSelect(channels) {
+  const select = document.getElementById("channelSelect");
+  select.innerHTML = '<option value="">-- Show All Videos --</option>';
+  channels.forEach((ch, idx) => {
+    const opt = document.createElement("option");
+    opt.value = idx;
+    opt.textContent = ch.name;
+    select.appendChild(opt);
+  });
+}
+
+// Show all videos of selected channel
+function showAllVideos(channelIndex) {
+  if (channelIndex === "") return;
+  const channel = channels[channelIndex];
+  const container = document.getElementById("channels-container");
+  container.innerHTML = "";
+
+  const channelDiv = document.createElement("div");
+  channelDiv.className = "channel";
+
+  const header = document.createElement("h2");
+  header.textContent = channel.name;
+  channelDiv.appendChild(header);
+
+  displayVideos(channelDiv, channel.videos);
+  container.appendChild(channelDiv);
+}
+
+// Initialize page
+window.onload = renderChannels;
