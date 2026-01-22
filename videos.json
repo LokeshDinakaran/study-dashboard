@@ -1,0 +1,18 @@
+{
+  "channels": [
+    {
+      "name": "Tech Explained",
+      "videos": [
+        { "title": "Heat Transfer Basics", "url": "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+        { "title": "Thermal Conductivity Demo", "url": "https://www.youtube.com/embed/abcd1234" }
+      ]
+    },
+    {
+      "name": "Music Vibes",
+      "videos": [
+        { "title": "Relaxing Piano", "url": "https://www.youtube.com/embed/xyz5678" },
+        { "title": "Jazz Improvisation", "url": "https://www.youtube.com/embed/efgh5678" }
+      ]
+    }
+  ]
+}
